@@ -36,9 +36,9 @@ export default {
   },
   watch: {
     // 监听器，时刻保证不显示
-    "$route.path"(newVal) {
-      this.showTabBar = newVal !== "/lyric" && newVal !== "/setting" && newVal !== "/sign-up" && newVal !== "/info" && newVal !== "/search" && newVal !== "/singer-list" && this.$route.path !== "/song-list";
-    },
+    // "$route.path"(newVal) {
+    //   this.showTabBar = newVal !== "/lyric" && newVal !== "/setting" && newVal !== "/sign-up" && newVal !== "/info" && newVal !== "/search" && newVal !== "/singer-list" && this.$route.path !== "/song-list";
+    // },
   },
 };
 </script>

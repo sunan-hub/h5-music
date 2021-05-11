@@ -21,7 +21,7 @@
           <span class="info-location">{{ location }} |</span>
           <span class="info-signature">{{ introduction }}</span>
         </div>
-        <router-link to="/info"><div class="mui-icon mui-icon-compose logout"></div></router-link>
+        <router-link to="/info"><div class="mui-icon mui-icon-compose logout" style="color: green; margin-top: 5px"></div></router-link>
       </div>
       <div class="album-content">
         <p class="album-content-title">我的收藏</p>

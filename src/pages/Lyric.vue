@@ -56,9 +56,10 @@ export default {
                         for(let j=0;j<this.lyr.length;j++){
                             document.querySelectorAll('.has-lyric li')[j].style.color = '#000';
                             document.querySelectorAll('.has-lyric li')[j].style.fontSize = '15px';
+                            document.querySelectorAll('.has-lyric li')[j].style.marginTop = '15px';
                         }
                         if(i>=0){
-                            document.querySelectorAll('.has-lyric li')[i].style.color = '#48658f';
+                            document.querySelectorAll('.has-lyric li')[i].style.color = '#00ff00';
                             document.querySelectorAll('.has-lyric li')[i].style.fontSize = '25px';
                         }
                     }
@@ -69,5 +70,5 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-@import '../assets/css/lyric.scss'
+@import '../assets/css/lyric.scss';
 </style>

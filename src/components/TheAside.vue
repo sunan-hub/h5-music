@@ -27,7 +27,7 @@
           {{ replaceFName(item.name) }} -
           <span class="item-name">{{ replaceLName(item.name) }}</span>
           <img src="../assets/img/is-play.gif" class="icon-is-play" v-show="id == item.id">
-          <span class="mui-icon mui-icon-closeempty"></span>
+          <!-- <span class="mui-icon mui-icon-closeempty"></span> -->
         </li>
       </ul>
     </div>
@@ -90,6 +90,7 @@ export default {
           }
         });
       }
+      this.$store.commit("setShowAside", true)
     },
     //解析歌词
     parseLyric(text) {
@@ -121,6 +122,12 @@ export default {
       });
       return result;
     },
+  },
+  destroyed() {
+    document.addEventListener(
+      "click",
+      null
+    )
   },
 };
 </script>

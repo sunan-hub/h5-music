@@ -14,9 +14,9 @@
         </router-link>
       </li>
       <li class="mui-table-view-cell mui-media">
-        <router-link to="/">
-          <span class="mui-icon-extra mui-icon-extra-find"></span>
-          <div to="" class="mui-media-body">电台</div>
+        <router-link to="/singer-list">
+          <span class="mui-icon-extra mui-icon-extra-peoples"></span>
+          <div class="mui-media-body">歌手</div>
         </router-link>
       </li>
       <li class="mui-table-view-cell mui-media">
@@ -26,9 +26,9 @@
         </router-link>
       </li>
       <li class="mui-table-view-cell mui-media">
-        <router-link to="/singer-list">
-          <span class="mui-icon-extra mui-icon-extra-peoples"></span>
-          <div class="mui-media-body">歌手</div>
+        <router-link to="/">
+          <span class="mui-icon-extra mui-icon-extra-find"></span>
+          <div to="" class="mui-media-body">电台</div>
         </router-link>
       </li>
       <li class="mui-table-view-cell mui-media">
@@ -36,7 +36,8 @@
           <span class="mui-icon-extra mui-icon-extra-notice"></span>
           <div class="mui-media-body">视频彩铃</div>
         </router-link>
-      </li>    </ul>
+      </li>
+    </ul>
   </div>
 </template>
 

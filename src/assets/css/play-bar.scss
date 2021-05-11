@@ -6,9 +6,9 @@
   z-index: 900;
   text-align: left;
   position: fixed;
-  bottom: 0;
+  bottom: 50px;
   height: 160px;
-  background-color: #f7f7f7;
+  background-color: green;
   // 歌词页面背景
   .lyric-bg {
     position: fixed;
@@ -36,7 +36,7 @@
 .time{
   position: absolute;
   font-size: .5em;
-  color:$color-grey;
+  color: black;
   top: 6.5em;
 }
   .playing-speed {

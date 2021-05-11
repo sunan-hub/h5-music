@@ -17,12 +17,12 @@
 }
 
 .mui-input-row:last-child {
-  background: #fff;
+  background: rgba(255, 255, 255, 0.5);
 }
 
 .mui-input-row {
   margin-top: 20px;
-  background: #fff;
+  background: rgba(255, 255, 255, 0.5);
 }
 
 .mui-input-row label ~ input,
@@ -31,11 +31,26 @@
   width: 78%;
 }
 
+.mui-btn {
+    font-size: 1em;
+    display: block;
+    width: 100%;
+    margin: 1em auto 0 auto;
+    background-color: #00b96c;
+    border: 2px solid green;
+    border-radius: .5em;
+}
+
 .link-area {
   display: block;
   margin-top: 25px;
   text-align: center;
-  color: $color-blue-dark;
+  color: rgb(0, 209, 0);
+}
+
+.mui-content {
+  background-color: rgba(0, 128, 128, 0.5);
+  padding-bottom: 1em;
 }
 
 .mui-content-padded {

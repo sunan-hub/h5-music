@@ -1,6 +1,22 @@
 @import "var.scss";
 @import "global.scss";
 
+.signUp {
+  background-color: rgba(255, 255, 255, 0.5);
+  padding-bottom: 2em;
+  .mint-cell {
+    background-color: transparent;
+  }
+  .mui-btn {
+    font-size: 1em;
+    display: block;
+    width: 100%;
+    margin: 1em auto 0 auto;
+    background-color: #00b96c;
+    border: 2px solid green;
+    border-radius: .5em;
+  }
+}
 // 性别
 .mint-switch{
   position: absolute;

@@ -28,16 +28,20 @@
     .search-input {
       margin: 0;
       border: none;
-      border-bottom: 1px solid $color-grey;
+      border-bottom: 1px solid rgb(14, 163, 0);
       text-indent: 1em;
+      background-color: rgba(214, 252, 234, 0.5);
     }
     // 搜索栏下的按钮
     .searchList-nav {
       padding-top: 0.25em;
+      padding-bottom: 0.25em;
       margin-bottom: 1em;
-      background-color: #fff;
-      color: $color-grey;
+      background-color: rgba(214, 252, 234, 0.5);
+      color: rgb(0, 99, 0);
       div {
+        height: 2em;
+        line-height: 2em;
         display: inline-block;
         width: 45%;
       }
@@ -46,8 +50,8 @@
 }
 // 按钮激活状态
 .isActive {
-  color: $color-black;
-  border-bottom: 0.25em solid $color-blue;
+  color: rgb(0, 238, 0);
+  border-bottom: 0.25em solid rgb(0, 238, 0);
 }
 .search-content{
   padding-top: 40px;

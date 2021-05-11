@@ -23,7 +23,7 @@
             <span class="item-intro">{{ item.introduction }}</span>
           </div>
         </div>
-        <div class="mui-icon mui-icon-more my-icon-more"></div>
+        <!-- <div class="mui-icon mui-icon-more my-icon-more"></div> -->
       </li>
     </ul>
   </div>
