@@ -1,0 +1,20 @@
+@import "var.scss";
+@import "global.scss";
+
+.song-list {
+  .song-list-header {
+    display: flex;
+    overflow: auto;
+    width: 100%;
+    margin-bottom: .25em;
+    .song-list-header-button {
+      margin: 0.25em;
+      flex-shrink: 0;
+    }
+    // 按钮激活的状态
+    .active {
+      color: #fff;
+      background-color: #26a2ff;
+    }
+  }
+}
