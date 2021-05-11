@@ -10,13 +10,13 @@
       <span class="mui-icon mui-icon-home"></span>
       <span class="mui-tab-label">首页</span>
     </router-link>
-    <router-link class="mui-tab-item" to="/mine" :class="{'mui-active':$route.meta.active === '/mine'}">
-      <span class="mui-icon mui-icon-contact"></span>
-      <span class="mui-tab-label">我的</span>
-    </router-link>
     <router-link class="mui-tab-item" to="/live" :class="{'mui-active':$route.meta.active === '/live'}">
       <span class="mui-icon mui-icon-videocam"></span>
       <span class="mui-tab-label">现场</span>
+    </router-link>
+    <router-link class="mui-tab-item" to="/mine" :class="{'mui-active':$route.meta.active === '/mine'}">
+      <span class="mui-icon mui-icon-contact"></span>
+      <span class="mui-tab-label">我的</span>
     </router-link>
   </nav>
 </template>

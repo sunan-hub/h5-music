@@ -14,11 +14,11 @@
     padding: $padding-out;
     .song-item {
       text-align: left;
-      background-color:$color-white;
+      background-color: transparent;
 
       //  序号
       .item-index {
-        color:$color-grey;
+        color: rgb(0, 255, 0);
         font-size: 1em;
         display: inline-block;
         line-height: 100%;
@@ -31,12 +31,12 @@
         padding-left: 2em;
         // 歌名
         .item-title {
-          color:$color-blue-dark;
+          color: rgb(0, 255, 0);
           font-size: 1em;
         }
         .item-name,
         .item-intro {
-          color: $color-grey;
+          color: rgb(0, 255, 0);
           font-size: 0.75em;
         }
       }

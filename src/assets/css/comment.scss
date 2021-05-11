@@ -8,17 +8,23 @@ li {
 h2 {
   width: 2em;
 }
+.mint-field-core {
+  background-color: greenyellow;
+}
 .comment {
   margin-bottom: 2em;
   .comment-msg {
     .comment-input {
-      border: 1px solid $color-grey;
+      background-color: #fff;
+      border: 1px solid green;
+      border-radius: 0.5em;
     }
   }
 }
 
 // 评论按钮
 .sub-btn {
+  background-color: rgb(0, 185, 108);
   float: right;
   height: 4em;
 }
@@ -46,10 +52,10 @@ h2 {
       padding-left: 1em;
       .name {
         display: block;
-        color: $color-grey;
+        color: greenyellow;
       }
       .time {
-        color: $color-grey;
+        color: greenyellow;
         font-size: 0.7em;
         display: block;
         width: 100%;
@@ -60,7 +66,7 @@ h2 {
     position: absolute;
     right: 0;
     top: 0;
-    color: $color-grey;
+    color: greenyellow;
     font-weight:lighter;
     svg.icon {
       width: 15px;
@@ -79,6 +85,12 @@ h2 {
 }
 // 精彩评论
 .comment-list{
-  color: $color-black;
+  color: rgb(0, 245, 143);
   font-weight: bold;
 }
+
+.popular {
+    .content {
+      color: greenyellow;
+    }
+  }

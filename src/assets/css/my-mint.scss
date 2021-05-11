@@ -30,7 +30,8 @@ div.mint-cell-value{
 // 歌手列表索引样式
 .mint-indexsection-index{
   padding-left: 1.5em;
-  background: f7f7f7;
+  background: transparent;
+  color: rgb(21, 255, 0);
 }
 // 右侧索引栏样式
 .mint-indexlist-navlist{
@@ -43,6 +44,7 @@ div.mint-cell-value{
 }
 .mint-indexlist-navitem{
   margin-bottom: -1em;
+  color: rgb(0, 252, 105);
 }
 
 

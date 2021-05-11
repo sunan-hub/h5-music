@@ -5,7 +5,7 @@
  * @LastEditTime: 2021-02-14 23:48:07
 -->
 <template>
-  <div id="app">
+  <div id="app" :style="{backgroundImage: 'url('+ url +')'}">
     <div class="container">
       <top-bar></top-bar>
       <!-- transition实现页面切换过渡效果 -->
@@ -42,7 +42,8 @@ export default {
   },
   data(){
     return{
-      isRouterAlive: true
+      isRouterAlive: true,
+      url: require('../src/assets/img/bg1.png')
     }
   },
   components: {
@@ -69,6 +70,5 @@ export default {
 </script>
 
 <style  lang="scss" scoped>
-@import './assets/css/app.scss'
-
+@import './assets/css/app.scss';
 </style>

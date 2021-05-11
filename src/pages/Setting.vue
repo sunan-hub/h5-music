@@ -8,13 +8,13 @@
   <div class="setting">
     <ul class="item">
       <li class="bb">设置<span class="mui-icon mui-icon-arrowright" /></li>
-      <li class="bb">我的账户<span class="mui-icon mui-icon-arrowright" /></li>
+      <!-- <li class="bb">我的账户<span class="mui-icon mui-icon-arrowright" /></li>
       <li>彩铃广场<span class="mui-icon mui-icon-arrowright" /></li>
       <li class="bb">DIY彩铃<span class="mui-icon mui-icon-arrowright" /></li>
       <li>活动中心<span class="mui-icon mui-icon-arrowright" /></li>
-      <li>达人CLUB<span class="mui-icon mui-icon-arrowright" /></li>
+      <li>达人CLUB<span class="mui-icon mui-icon-arrowright" /></li> -->
       <li>
-        吾声隐私权政策<span class="extra">尊贵标识&独享权益</span
+        清香音乐隐私权政策<span class="extra"></span
         ><span class="mui-icon mui-icon-arrowright" />
       </li>
       <li>帮助与客服<span class="mui-icon mui-icon-arrowright" /></li>

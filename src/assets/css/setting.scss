@@ -20,6 +20,7 @@
   .item{
     text-align: left;
     margin-bottom: 3em;
+    color: rgb(0, 252, 21);
     .bb{
       border-bottom: .5px solid $color-grey;
     }
@@ -27,7 +28,7 @@
       height: 3em;
       line-height: 3em;
       .mui-icon-arrowright{
-        color: $color-grey;
+        color: rgb(0, 252, 21);
         float: right;
         line-height: 2em;
       }

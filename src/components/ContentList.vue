@@ -15,7 +15,7 @@
         <!-- 有item.name是歌手,没有则是歌单 -->
         <div class="kuo" @click="goAlbum(item, item.name)">
           <!-- v-lazy懒加载 -->
-          <img class="item-img" v-lazy="attachImageUrl(item.pic)" />
+          <img class="item-img" v-lazy="attachImageUrl(item.pic)" style="box-shadow: green 0px 0px 5px 5px;margin-top: 10px"/>
         </div>
         <p class="item-name">{{ item.name || item.title }}</p>
       </li>

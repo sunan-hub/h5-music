@@ -9,9 +9,9 @@
     <swiper :swiperList="swiperList" class="home-swipe"></swiper>
     <table-view class="myTV"></table-view>
     <div class="section" v-for="(item, index) in songsList" :key="index">
-      <div class="section-title">
-        {{ item.name }}
-        <span class="findMore">邂逅你的真爱{{ item.name }} ></span>
+      <div class="section-title" style="color: rgb(0, 255, 34); margin-top: 10px">
+        今日推荐{{ item.name }}
+        <!-- <span class="findMore">邂逅你的真爱{{ item.name }} ></span> -->
       </div>
       <content-list :contentList="item.list"></content-list>
     </div>
@@ -38,8 +38,8 @@ export default {
     return {
       swiperList: [],
       songsList: [
-        { name: "歌单", list: [] },
-        { name: "歌手", list: [] },
+        { name: "歌单", list: [] }
+        // { name: "歌手", list: [] },
       ],
     };
   },
@@ -48,8 +48,8 @@ export default {
     this.getSwiperList();
     // 获取歌单
     this.getSongList();
-    // 获取歌手
-    this.getSinger();
+    // // 获取歌手
+    // this.getSinger();
   },
   methods: {
     getSwiperList() {
@@ -72,16 +72,16 @@ export default {
           console.log(err);
         });
     },
-    getSinger() {
-      //获取前十名歌手
-      getAllSinger()
-        .then((res) => {
-          this.songsList[1].list = res.slice(0, 9);
-        })
-        .catch((err) => {
-          console.log(err);
-        });
-    },
+    // getSinger() {
+    //   //获取前十名歌手
+    //   getAllSinger()
+    //     .then((res) => {
+    //       this.songsList[1].list = res.slice(0, 9);
+    //     })
+    //     .catch((err) => {
+    //       console.log(err);
+    //     });
+    // },
   },
 };
 </script>

@@ -78,13 +78,13 @@
   margin-bottom: 15px;
   .header-con {
     padding: 10px;
-    background-color: #fff;
+    background-color: rgba(0, 243, 170, 0.5);
     .user-info {
       position: relative;
       overflow: hidden;
       width: 100%;
       height: 120px;
-      background: linear-gradient(90deg, #28a2ff, #ffd787);
+      // background: linear-gradient(90deg, #28a2ff, #ffd787);
       box-shadow: 0 0.1rem 0.25rem #f8e3c6;
       .avatar-con {
         position: absolute;

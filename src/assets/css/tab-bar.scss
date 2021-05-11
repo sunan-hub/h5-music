@@ -3,9 +3,10 @@
 
 .mui-bar{
   z-index: 900;
+	background-color: green;
 }
 	.mui-bar-tab .mui-tab-item-lib.mui-active {
-    color: #007aff
+    color: #007aff;
   }
 
 	.mui-bar-tab .mui-tab-item-lib {
@@ -26,6 +27,13 @@
 		height: 24px;
 		padding-top: 0;
 		padding-bottom: 0;
+	}
+
+	.mui-bar-tab .mui-tab-item {
+		color: rgb(5, 199, 47);
+		&.router-link-active {
+			color: rgb(51, 255, 0);
+		}
 	}
 
 	.mui-bar-tab .mui-tab-item-lib .mui-icon~.mui-tab-label {

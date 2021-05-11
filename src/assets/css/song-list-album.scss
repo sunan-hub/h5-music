@@ -16,10 +16,11 @@
       filter: brightness(50%);
     }
     .underImg {
+      min-height: 76vh;
       position: absolute;
       z-index: 20;
       top: 7em;
-      background: #fff;
+      background: rgba(0, 173, 9, 0.9);
       width: 100%;
       padding: 1.5em 1em 0 1em;
       border-radius: 1.5em 0 0 0;
@@ -28,6 +29,16 @@
       .mui-table-view-cell{
         margin-left: -1em;
       }
+      .mui-navigate-right {
+        color: rgb(0, 255, 149);
+      }
+      .mui-collapse-content {
+        color: rgb(0, 255, 149);
+        background-color: transparent;
+      }
+      .mui-active {
+        background-color: transparent;
+      }
       .album-info{
         font-size: .75em;
         color:$color-grey;
@@ -35,17 +46,17 @@
       // 歌曲评分
       .album-score {
         position: absolute;
-        right: 2em;
+        right: 0.5em;
         top: 0.5em;
-        color: $color-grey;
-        font-size: 0.8em;
+        color: greenyellow;
+        font-size: 1.2em;
         span {
           font-size: 0.8em;
         }
       }
       .album-title {
         font-size: 1.25em;
-        color: $color-black;
+        color: greenyellow;
         line-height: 1em;
         font-weight: bolder;
       }
