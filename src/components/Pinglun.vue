@@ -16,7 +16,7 @@
     </div>
     <p class="pinglun-list">精彩评论：共{{ pinglunList.length }}条评论</p>
     <ul class="popular" v-for="(item, index) in pinglunList" :key="index">
-      <li>
+      <li v-if="userName[index]">
         <div class="popular-imgAmsg">
           <div class="popular-img">
             <img :src="attachImageUrl(userPic[index])" />

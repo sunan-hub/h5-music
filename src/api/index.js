@@ -40,15 +40,15 @@ export const listSongDetail = (songListId) => get(`listSong/detail?songListId=${
 
 //============用户相关================
 //查询用户
-export const getAllConsumer =() => get(`consumer/allConsumer`);
+export const getAllUsers =() => get(`users/allUsers`);
 //注册
-export const SignUp =(params) => post(`/consumer/add`,params);
+export const SignUp =(params) => post(`/users/add`,params);
 //登录
-export const loginIn =(params) => post(`/consumer/login`,params);
+export const loginIn =(params) => post(`/users/login`,params);
 //根据用户id查询该用户的详细信息
-export const getUserOfId =(id) => get(`/consumer/selectByPrimaryKey?id=${id}`);
+export const getUserOfId =(id) => get(`/users/selectByPrimaryKey?id=${id}`);
 //更新用户信息
-export const updateUserMsg =(params) => post(`/consumer/update`,params);
+export const updateUserMsg =(params) => post(`/users/update`,params);
 
 //下载音乐
 export const download = (url)  => axios({

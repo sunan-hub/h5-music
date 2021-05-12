@@ -131,7 +131,7 @@ export default {
       if (this.loginIn) {
         let params = new URLSearchParams();
         params.append("songListId", this.songListId);
-        params.append("consumerId", this.userId);
+        params.append("usersId", this.userId);
         params.append("score", this.pingfen * 2);
         setPingfen(params)
           .then((res) => {
