@@ -1,6 +1,6 @@
 <!--
  * @Descripttion:
- * @Author: 无声<ivestszheng@qq.com>
+ * @Author: 清香<ivestszheng@qq.com>
  * @Date: 2020-12-12 16:44:25
  * @LastEditTime: 2021-02-13 20:51:32
 -->
@@ -19,9 +19,9 @@
           <div class="mui-media-body">歌手</div>
         </router-link>
       </li>
-      <li class="mui-table-view-cell mui-media">
+      <!-- <li class="mui-table-view-cell mui-media">
         <router-link to="/">
-          <span class="mui-icon-extra mui-icon-extra-rank"></span>
+          <span class="mui-icon-extra mui-icon-extra-pingfen"></span>
           <div to="" class="mui-media-body">排行榜</div>
         </router-link>
       </li>
@@ -36,7 +36,7 @@
           <span class="mui-icon-extra mui-icon-extra-notice"></span>
           <div class="mui-media-body">视频彩铃</div>
         </router-link>
-      </li>
+      </li> -->
     </ul>
   </div>
 </template>

@@ -1,6 +1,6 @@
 <!--
  * @Descripttion: 播放栏
- * @Author: 无声<ivestszheng@qq.com>
+ * @Author: 清香<ivestszheng@qq.com>
  * @Date: 2020-12-19 14:33:01
  * @LastEditTime: 2021-02-24 23:36:54
 -->
@@ -22,7 +22,7 @@
       ></mt-range>
       <!-- 收藏 -->
       <div class="item-icon item-icon-top">
-        <div class="item" @click="collection">
+        <div class="item" @click="shoucang">
           <svg :class="{ active: isActive }" class="icon">
             <use xlink:href="#icon-xihuan-shi"></use>
           </svg>
@@ -103,7 +103,7 @@
         <img :src="picUrl" />
       </div>
       <!-- 歌曲文字 -->
-      <div class="item-letter">{{ this.title }}-{{ this.artist }}</div>
+      <div class="item-letter" @click="toLyric">{{ this.title }}-{{ this.artist }}</div>
       <!-- 按钮组 -->
       <div class="item-icon">
         <svg class="icon" @click="togglePlay">
@@ -119,7 +119,7 @@
 <script>
 import { Toast } from "mint-ui";
 import { mapGetters } from "vuex";
-import { download, setCollect, getCollectOfUserId, deleteCollection } from "../api/index";
+import { download, setShoucang, getShoucangOfUserId, deleteShoucangion } from "../api/index";
 
 export default {
   name: "play-bar",
@@ -354,7 +354,7 @@ export default {
         );
         this.$store.commit("setIsActive", false);
         if (this.loginIn) {
-          getCollectOfUserId(this.userId).then((res) => {
+          getShoucangOfUserId(this.userId).then((res) => {
             for (let item of res) {
               if (item.songId == id) {
                 this.$store.commit("setIsActive", true);
@@ -432,19 +432,19 @@ export default {
         });
     },
     //收藏
-    collection() {
+    shoucang() {
       if (this.loginIn) {
         var params = new URLSearchParams();
         params.append("userId", this.userId);
         params.append("type", 0);
         params.append("songId", this.id);
-        setCollect(params).then((res) => {
+        setShoucang(params).then((res) => {
           if (res.code == 1) {
             // 已收藏，则改变收藏按钮颜色
             this.$store.commit("setIsActive", true);
             Toast("收藏成功");
           } else if (res.code == 2) {
-            deleteCollection(this.userId, this.id)
+            deleteShoucangion(this.userId, this.id)
               .then(res => {
                 if (res) {
                   this.$store.commit("setIsActive", false);

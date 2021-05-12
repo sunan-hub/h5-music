@@ -1,6 +1,6 @@
 <!--
  * @Descripttion: 歌单内容页面
- * @Author: 无声<ivestszheng@qq.com>
+ * @Author: 清香<ivestszheng@qq.com>
  * @Date: 2020-12-15 22:46:24
  * @LastEditTime: 2020-12-26 21:37:31
 -->
@@ -34,10 +34,10 @@
         </div>
         <div></div>
         <!-- 我的评分 -->
-        <div @click="setRank" class="my-score">
-          <el-rate v-model="rank" allow-half show-text></el-rate>
+        <div @click="setPingfen" class="my-score">
+          <el-rate v-model="pingfen" allow-half show-text></el-rate>
         </div>
-        <comment :playId="songListId" :type="1"></comment>
+        <pinglun :playId="songListId" :type="1"></pinglun>
       </div>
     </div>
   </div>
@@ -49,25 +49,25 @@ import { mapGetters } from "vuex";
 import {
   listSongDetail,
   songOfSongId,
-  setRank,
-  getRankOfSongListId,
+  setPingfen,
+  getPingfenOfSongListId,
 } from "../api/index";
 import AlbumContent from "../components/AlbumContent";
-import Comment from "../components/Comment";
+import Pinglun from "../components/Pinglun";
 
 export default {
   name: "song-list-album",
   mixins: [mixin],
   components: {
     AlbumContent,
-    Comment,
+    Pinglun,
   },
   data() {
     return {
       songLists: [], //当前页面需要展示的歌曲列表
       songListId: "", //前面传来的歌单id
       average: 0, //平均分
-      rank: 0, //提交评价的分数
+      pingfen: 0, //提交评价的分数
       isActive: false, //是否显示歌曲介绍
     };
   },
@@ -82,7 +82,7 @@ export default {
   created() {
     this.songListId = this.$route.params.id;
     this.getSongId();
-    this.getRank(this.songListId);
+    this.getPingfen(this.songListId);
   },
   methods: {
     // 点击切换折叠面板样式
@@ -117,8 +117,8 @@ export default {
         });
     },
     //获取歌单评分
-    getRank(id) {
-      getRankOfSongListId(id)
+    getPingfen(id) {
+      getPingfenOfSongListId(id)
         .then((res) => {
           this.average = res / 2;
         })
@@ -127,17 +127,17 @@ export default {
         });
     },
     //提交评分
-    setRank() {
+    setPingfen() {
       if (this.loginIn) {
         let params = new URLSearchParams();
         params.append("songListId", this.songListId);
         params.append("consumerId", this.userId);
-        params.append("score", this.rank * 2);
-        setRank(params)
+        params.append("score", this.pingfen * 2);
+        setPingfen(params)
           .then((res) => {
             if (res.code == 1) {
               Toast("评分成功");
-              this.getRank(this.songListId);
+              this.getPingfen(this.songListId);
             } else {
               Toast("评分失败");
             }
@@ -146,7 +146,7 @@ export default {
             Toast("您已经评价过啦");
           });
       } else {
-        this.rank = null;
+        this.pingfen = null;
         Toast("请先登录");
       }
     },

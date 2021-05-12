@@ -1,6 +1,6 @@
 /*
  * @Descripttion:
- * @Author: 无声<ivestszheng@qq.com>
+ * @Author: 清香<ivestszheng@qq.com>
  * @Date: 2020-12-10 18:23:43
  * @LastEditTime: 2021-02-24 15:52:39
  */
@@ -59,30 +59,30 @@ export const download = (url)  => axios({
 
 //===========评价======================
 //提交评分
-export const setRank =(params) => post(`/rank/add`,params);
+export const setPingfen =(params) => post(`/pingfen/add`,params);
 //获取指定歌单的平均分
-export const getRankOfSongListId = (songListId) => get(`/rank?songListId=${songListId}`);
+export const getPingfenOfSongListId = (songListId) => get(`/pingfen?songListId=${songListId}`);
 
 //===========评论======================
 //提交评论
-export const setComment =(params) => post(`/comment/add`,params);
+export const setPinglun =(params) => post(`/pinglun/add`,params);
 //点赞
-export const setLike =(params) => post(`/comment/like`,params);
+export const setLike =(params) => post(`/pinglun/like`,params);
 //返回当前歌单或歌曲的评论列表
-export const getAllComment = (type,id) => {
+export const getAllPinglun = (type,id) => {
     if(type == 0){              //歌曲
-        return get(`/comment/commentOfSongId?songId=${id}`);
+        return get(`/pinglun/pinglunOfSongId?songId=${id}`);
     }else{                      //歌单
-        return get(`/comment/commentOfSongListId?songListId=${id}`);
+        return get(`/pinglun/pinglunOfSongListId?songListId=${id}`);
     }
 }
 
 //===============收藏===================
 //新增收藏
-export const setCollect =(params) => post(`/collect/add`,params);
+export const setShoucang =(params) => post(`/shoucang/add`,params);
 //指定用户的收藏列表
-export const getCollectOfUserId = (userId) => get(`/collect/collectOfUserId?userId=${userId}`);
+export const getShoucangOfUserId = (userId) => get(`/shoucang/shoucangOfUserId?userId=${userId}`);
 // 删除用户收藏的歌曲
-export const deleteCollection = (userId, songId) => get(`collect/delete?userId=${userId}&songId=${songId}`)
+export const deleteShoucangion = (userId, songId) => get(`shoucang/delete?userId=${userId}&songId=${songId}`)
 
 

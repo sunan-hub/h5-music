@@ -1,6 +1,6 @@
 <!--
  * @Descripttion: 封装的H5-audio组件
- * @Author: 无声<ivestszheng@qq.com>
+ * @Author: 清香<ivestszheng@qq.com>
  * @Date: 2020-12-12 15:15:46
  * @LastEditTime: 2020-12-26 19:46:09
 -->

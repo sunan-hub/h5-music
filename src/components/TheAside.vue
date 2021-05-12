@@ -1,6 +1,6 @@
 <!--
  * @Descripttion: 播放列表
- * @Author: 无声<ivestszheng@qq.com>
+ * @Author: 清香<ivestszheng@qq.com>
  * @Date: 2020-12-19 21:16:42
  * @LastEditTime: 2021-05-04 13:11:24
 -->
@@ -35,7 +35,7 @@
 </template>
 <script>
 import { mapGetters } from "vuex";
-import { getCollectOfUserId } from "../api/index";
+import { getShoucangOfUserId } from "../api/index";
 
 export default {
   name: "the-aside",
@@ -81,7 +81,7 @@ export default {
       this.$store.commit("setLyric", this.parseLyric(lyric));
       this.$store.commit("setIsActive", false);
       if (this.loginIn) {
-        getCollectOfUserId(this.userId).then((res) => {
+        getShoucangOfUserId(this.userId).then((res) => {
           for (let item of res) {
             if (item.songId == id) {
               this.$store.commit("setIsActive", true);

@@ -135,7 +135,7 @@ Home.vue
           <div class="mui-media-body">电台</div>
         </router-link></li>
       <li class="mui-table-view-cell mui-media"><router-link to="">
-          <span class="mui-icon-extra mui-icon-extra-rank"></span>
+          <span class="mui-icon-extra mui-icon-extra-pingfen"></span>
           <div class="mui-media-body">排行榜</div>
         </router-link></li>
       <li class="mui-table-view-cell mui-media"><router-link to="">

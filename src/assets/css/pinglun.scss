@@ -11,10 +11,10 @@ h2 {
 .mint-field-core {
   background-color: greenyellow;
 }
-.comment {
+.pinglun {
   margin-bottom: 2em;
-  .comment-msg {
-    .comment-input {
+  .pinglun-msg {
+    .pinglun-input {
       background-color: #fff;
       border: 1px solid green;
       border-radius: 0.5em;
@@ -28,7 +28,7 @@ h2 {
   float: right;
   height: 4em;
 }
-.comment-img {
+.pinglun-img {
   width: 3em;
   img {
     // 头像大小
@@ -52,10 +52,10 @@ h2 {
       padding-left: 1em;
       .name {
         display: block;
-        color: greenyellow;
+        color: rgb(0, 241, 181);
       }
       .time {
-        color: greenyellow;
+        color: rgb(0, 241, 181);
         font-size: 0.7em;
         display: block;
         width: 100%;
@@ -84,7 +84,7 @@ h2 {
   margin-bottom: 5em;
 }
 // 精彩评论
-.comment-list{
+.pinglun-list{
   color: rgb(0, 245, 143);
   font-weight: bold;
 }

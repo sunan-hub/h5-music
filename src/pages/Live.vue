@@ -1,6 +1,6 @@
 <!--
  * @Descripttion: 现场
- * @Author: 无声<ivestszheng@qq.com>
+ * @Author: 清香<ivestszheng@qq.com>
  * @Date: 2020-12-10 18:23:43
  * @LastEditTime: 2021-02-12 18:00:17
 -->
@@ -134,7 +134,7 @@
         </div>
         <div class="item">
           <img src="../assets/img/livePic/16.jpg" class="item-img" />
-          <p class="item-name">张奕凡《安静时刻》，此刻无声胜有声</p>
+          <p class="item-name">张奕凡《安静时刻》，此刻清香胜有声</p>
         </div>
       </div>
     </div>

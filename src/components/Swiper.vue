@@ -1,6 +1,6 @@
 <!--
  * @Descripttion: 轮播图
- * @Author: 无声<ivestszheng@qq.com>
+ * @Author: 清香<ivestszheng@qq.com>
  * @Date: 2020-12-09 09:23:46
  * @LastEditTime: 2021-02-08 16:58:56
 -->

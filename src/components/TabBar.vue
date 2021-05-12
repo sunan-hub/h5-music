@@ -1,6 +1,6 @@
 <!--
  * @Descripttion: 底部导航栏
- * @Author: 无声<ivestszheng@qq.com>
+ * @Author: 清香<ivestszheng@qq.com>
  * @Date: 2020-12-09 10:10:19
  * @LastEditTime: 2021-02-23 15:05:44
 -->
@@ -10,10 +10,10 @@
       <span class="mui-icon mui-icon-home"></span>
       <span class="mui-tab-label">首页</span>
     </router-link>
-    <router-link class="mui-tab-item" to="/live" :class="{'mui-active':$route.meta.active === '/live'}">
+    <!-- <router-link class="mui-tab-item" to="/live" :class="{'mui-active':$route.meta.active === '/live'}">
       <span class="mui-icon mui-icon-videocam"></span>
       <span class="mui-tab-label">现场</span>
-    </router-link>
+    </router-link> -->
     <router-link class="mui-tab-item" to="/mine" :class="{'mui-active':$route.meta.active === '/mine'}">
       <span class="mui-icon mui-icon-contact"></span>
       <span class="mui-tab-label">我的</span>

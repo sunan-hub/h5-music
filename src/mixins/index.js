@@ -1,7 +1,7 @@
 // @ts-nocheck
 import { Toast } from "mint-ui";
 import { mapGetters } from 'vuex';
-import { likeSongOfName, getCollectOfUserId } from '../api/index';
+import { likeSongOfName, getShoucangOfUserId } from '../api/index';
 
 export const mixin = {
   computed: {
@@ -54,7 +54,7 @@ export const mixin = {
       this.$store.commit('setLyric', this.parseLyric(lyric));
       this.$store.commit('setIsActive', false);
       if (this.loginIn) {
-        getCollectOfUserId(this.userId)
+        getShoucangOfUserId(this.userId)
           .then(res => {
             for (let item of res) {
               if (item.songId == id) {

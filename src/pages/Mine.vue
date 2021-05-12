@@ -26,7 +26,7 @@
       <div class="album-content">
         <p class="album-content-title">我的收藏</p>
         <div class="songs-body">
-          <album-content :songList="collectList"> </album-content>
+          <album-content :songList="shoucangList"> </album-content>
         </div>
       </div>
     </div>
@@ -59,7 +59,7 @@
 <script>
 import { mixin } from "../mixins";
 import { mapGetters } from "vuex";
-import { getUserOfId, getCollectOfUserId, songOfSongId } from "../api/index";
+import { getUserOfId, getShoucangOfUserId, songOfSongId } from "../api/index";
 import AlbumContent from "../components/AlbumContent";
 
 export default {
@@ -76,8 +76,8 @@ export default {
       birth: "", //生日
       location: "", //故乡
       introduction: "", //签名
-      collection: [], //收藏的歌曲列表
-      collectList: [], //收藏的歌曲列表（带歌曲详情）
+      shoucanglists: [], //收藏的歌曲列表
+      shoucangList: [], //收藏的歌曲列表（带歌曲详情）
     };
   },
   computed: {
@@ -88,7 +88,7 @@ export default {
   },
   mounted() {
     this.getMsg(this.userId);
-    this.getCollection(this.userId);
+    this.getShoucangion(this.userId);
   },
   methods: {
     getMsg(userId) {
@@ -110,12 +110,12 @@ export default {
         });
     },
     //获取我的收藏列表
-    getCollection(userId) {
-      getCollectOfUserId(userId)
+    getShoucangion(userId) {
+      getShoucangOfUserId(userId)
         .then((res) => {
-          this.collection = res;
+          this.shoucanglists = res;
           //通过歌曲id获取歌曲信息
-          for (let item of this.collection) {
+          for (let item of this.shoucanglists) {
             this.getSongsOfIds(item.songId);
           }
         })
@@ -127,7 +127,7 @@ export default {
     getSongsOfIds(id) {
       songOfSongId(id)
         .then((res) => {
-          this.collectList.push(res);
+          this.shoucangList.push(res);
         })
         .catch((err) => {
           console.log(err);
