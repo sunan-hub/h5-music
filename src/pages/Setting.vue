@@ -1,23 +1,23 @@
 <!--
  * @Descripttion:
- * @Author: 清香<ivestszheng@qq.com>
+ * @Author: 清香<1816546887@qq.com>
  * @Date: 2021-02-13 16:40:16
  * @LastEditTime: 2021-02-14 19:01:12
 -->
 <template>
   <div class="setting">
     <ul class="item">
-      <li class="bb">设置<span class="mui-icon mui-icon-arrowright" /></li>
+      <li @click="goto('yinsi')" class="bb">设置<span class="mui-icon mui-icon-arrowright" /></li>
       <!-- <li class="bb">我的账户<span class="mui-icon mui-icon-arrowright" /></li>
       <li>彩铃广场<span class="mui-icon mui-icon-arrowright" /></li>
       <li class="bb">DIY彩铃<span class="mui-icon mui-icon-arrowright" /></li>
       <li>活动中心<span class="mui-icon mui-icon-arrowright" /></li>
       <li>达人CLUB<span class="mui-icon mui-icon-arrowright" /></li> -->
-      <li>
+      <li @click="goto('yinsi')">
         清香音乐隐私权政策<span class="extra"></span
         ><span class="mui-icon mui-icon-arrowright" />
       </li>
-      <li>帮助与客服<span class="mui-icon mui-icon-arrowright" /></li>
+      <li @click="goto('yinsi')">帮助与客服<span class="mui-icon mui-icon-arrowright" /></li>
     </ul>
     <router-link to="/home">
       <div class="mui-icon mui-icon-closeempty"></div
@@ -72,6 +72,10 @@ export default {
   created() {},
   mounted() {},
   methods: {
+    // 转到
+    goto(url) {
+      this.$router.push("/" + url);
+    },
     // 退出登录
     logout() {
       this.$messagebox
@@ -88,7 +92,7 @@ export default {
             this.$store.commit("setLoginIn", false);
             // 解决我的页面数据残留
             this.reload();
-            this.$router.push("/mine");
+            this.$router.push("/mine")
           }
         })
         .catch((err) => {

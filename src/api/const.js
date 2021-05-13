@@ -1,6 +1,6 @@
 /*
  * @Descripttion: 汉字转换拼音规则
- * @Author: 清香<ivestszheng@qq.com>
+ * @Author: 清香<1816546887@qq.com>
  * @Date: 2020-12-11 14:48:17
  * @LastEditTime: 2021-02-07 18:55:27
  */

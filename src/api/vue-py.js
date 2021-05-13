@@ -1,6 +1,6 @@
 /*
  * @Descripttion: 实现汉字转拼音功能，只返回第一个首字母
- * @Author: 清香<ivestszheng@qq.com>
+ * @Author: 清香<1816546887@qq.com>
  * @Date: 2020-12-11 14:50:38
  * @LastEditTime: 2020-12-11 15:13:50
  */
