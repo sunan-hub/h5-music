@@ -12,6 +12,9 @@
       <div class="section-title" style="color: rgb(0, 255, 34); margin-top: 10px">
         今日推荐{{ item.name }}
         <!-- <span class="findMore">邂逅你的真爱{{ item.name }} ></span> -->
+        <router-link to="/song-list">
+          <span class="findMore">更多{{ item.name }}<i class="el-icon-arrow-right"></i></span>
+        </router-link>
       </div>
       <content-list :contentList="item.list"></content-list>
     </div>

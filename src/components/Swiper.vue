@@ -6,7 +6,7 @@
 -->
 <template>
   <div>
-    <mt-swipe :auto="4000">
+    <mt-swipe :auto="2500">
       <mt-swipe-item v-for="item in swiperList" :key="item.id">
         <img :src="item.url" :alt="item.name"/>
       </mt-swipe-item>
@@ -27,7 +27,7 @@ export default {
 
     },
     mounted() {
-
+      console.log(this.swiperList)
     },
     methods: {
 

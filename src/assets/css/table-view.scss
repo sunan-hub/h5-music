@@ -8,10 +8,11 @@ li {
   // 九宫格背景
   background-color: rgba(0, 128, 0, 0.8);
   border: none;
-  // 九宫格按钮左右两端对齐
+  // 九宫格按钮左右两端对齐、平分空间
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  // justify-content: space-between;
+  justify-content: space-evenly;
 }
 
 .mui-media-body {

@@ -63,23 +63,23 @@ export default {
     },
     indexFilter() {
       const dataSource = this.$props.indexList
-      console.log(dataSource);
-      console.log(dataSource);
+      // console.log(dataSource);
+      // console.log(dataSource);
       for (let i = 0; i < this.index.length - 1; i++) {
-        console.log(this.index[i].index);
+        // console.log(this.index[i].index);
         const tempList = []
         // 从后往前遍历，解决splice()后下标改变问题
         for (let x = dataSource.length-1 ;x >= 0;x--) {
           if (vPinyin.chineseToPinYin(dataSource[x].name) == this.index[i].index) {
-            console.log(dataSource[x].name);
+            // console.log(dataSource[x].name);
             tempList.push(dataSource[x])
             dataSource.splice(x, 1)
           }
         }
         this.index[i].list = tempList
       }
-      console.log('#');
-      console.log(dataSource);
+      // console.log('#');
+      // console.log(dataSource);
       this.index[this.index.length - 1].list = dataSource
     }
   }
