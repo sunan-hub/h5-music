@@ -32,10 +32,17 @@
       </button>
       <button
         class="mui-btn mui-btn-block mui-btn-default"
+        @click="switchUser"
+        v-if="loginIn"
+      >
+        切换账号
+      </button>
+      <button
+        class="mui-btn mui-btn-block mui-btn-default"
         @click="logOff"
         v-if="loginIn"
       >
-        注销账户
+        注销账号
       </button>
       <button class="mui-btn mui-btn-block mui-btn-default" @click="closeApp">
         关闭应用
@@ -81,7 +88,7 @@ export default {
             this.$store.commit("setLoginIn", false);
             // 解决我的页面数据残留
             this.reload();
-            this.$router.push("/home");
+            this.$router.push("/mine");
           }
         })
         .catch((err) => {
@@ -89,6 +96,34 @@ export default {
           }
         });
     }, 
+    // 切换账号
+    switchUser() {
+      this.$messagebox
+        .confirm("确定退出当前账号？", "提示")
+        .then((action) => {
+          if (action == "confirm") {
+            // 提示用户退出成功
+            Toast({
+              message: "已退出登录",
+              position: "top",
+              duration: 5000,
+            });
+            // 将Vuex中的用户信息删除
+            this.$store.commit("setLoginIn", false);
+            // 解决我的页面数据残留
+            this.reload();
+            this.$router.push("/mine");
+          }
+        })
+        .catch((err) => {
+          Toast({
+              message: "操作失败",
+              position: "top",
+              duration: 5000,
+            });
+            console.log(err)
+        });
+    },
     // 注销用户
     logOff() {
       this.$messagebox

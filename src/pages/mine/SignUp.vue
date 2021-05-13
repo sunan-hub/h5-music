@@ -123,7 +123,7 @@ export default {
       params.append("birth", this.registerForm.birth);
       params.append("introduction", this.registerForm.introduction);
       params.append("location", this.registerForm.location);
-      params.append("avator", "/img/user.jpg");
+      params.append("avator", "/img/userPic.jpg");
       SignUp(params)
         .then((res) => {
           if (res.code == 1) {
