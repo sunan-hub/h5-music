@@ -17,9 +17,24 @@ import './lib/mui/css/icons-extra.css'
 // 导入mint-ui样式
 import 'mint-ui/lib/style.css'
 // 按需引入mint-ui,Toast不能全局,需要在组件中引入
-import { Header, Swipe, SwipeItem, Field, Lazyload, Button, Cell, IndexList, IndexSection, Switch, Range, MessageBox } from 'mint-ui';
+import {
+  Header,
+  Swipe,
+  SwipeItem,
+  Field,
+  Lazyload,
+  Button,
+  Cell,
+  IndexList,
+  IndexSection,
+  Switch,
+  Range,
+  MessageBox,
+  Popup,
+  Picker
+} from "mint-ui";
 // 按需引入Element-ui
-import { Rate, Progress,Upload } from 'element-ui';
+import { Rate, Progress, Upload, Select, Option } from "element-ui";
 import 'element-ui/lib/theme-chalk/index.css';
 // import ElementUI from 'element-ui'
 // 引入重写的mint-UI样式
@@ -48,11 +63,16 @@ Vue.component(IndexList.name, IndexList)
 Vue.component(IndexSection.name, IndexSection)
 Vue.component(Switch.name, Switch)
 Vue.component(Range.name, Range)
+Vue.component(Popup.name, Popup)
+Vue.component(Picker.name, Picker);
 Vue.prototype.$messagebox = MessageBox
 // Element-ui
 Vue.component(Rate.name, Rate)
 Vue.component(Progress.name, Progress)
 Vue.component(Upload.name, Upload)
+Vue.component(Select.name, Select)
+Vue.component(Select.name, Select)
+Vue.component(Option.name, Option)
 // Vue.use(ElementUI)
 
 Vue.config.productionTip = false

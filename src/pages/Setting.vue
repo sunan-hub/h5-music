@@ -23,16 +23,23 @@
       <div class="mui-icon mui-icon-closeempty"></div
     ></router-link>
     <div class="mui-icon-extra mui-icon-extra-sweep"></div>
-        <button
-      class="mui-btn mui-btn-block mui-btn-default"
-      @click="logout"
-      v-if="loginIn"
-    >
-      退出登录
-    </button>
-        <button class="mui-btn mui-btn-block mui-btn-default" @click="closeApp">
-      关闭应用
-    </button>
+       <button
+        class="mui-btn mui-btn-block mui-btn-default"
+        @click="logout"
+        v-if="loginIn"
+      >
+        退出登录
+      </button>
+      <button
+        class="mui-btn mui-btn-block mui-btn-default"
+        @click="logOff"
+        v-if="loginIn"
+      >
+        注销账户
+      </button>
+      <button class="mui-btn mui-btn-block mui-btn-default" @click="closeApp">
+        关闭应用
+      </button>
   </div>
 </template>
 
@@ -40,6 +47,7 @@
 import { Toast } from "mint-ui";
 import { mixin } from "../mixins";
 import { mapGetters } from "vuex";
+import { delUsers } from "../api/index";
 
 export default {
   inject: ["reload"],
@@ -48,6 +56,7 @@ export default {
   computed: {
     ...mapGetters([
       "loginIn", //用户是否已登录
+      "userId", //当前登录用户id
     ]),
   },
   data() {
@@ -79,7 +88,46 @@ export default {
           if (err == "cancel") {
           }
         });
-    }, // 退出应用
+    }, 
+    // 注销用户
+    logOff() {
+      this.$messagebox
+        .confirm("确定注销当前账号？", "提示")
+        .then((action) => {
+          if (action == "confirm") {
+            delUsers(this.userId)
+            .then(res => {
+              if (res) {
+                // 提示用户注销成功
+                Toast({
+                  message: "已注销成功",
+                  position: "top",
+                  duration: 5000,
+                });
+                // 将Vuex中的用户信息删除
+                this.$store.commit("setLoginIn", false);
+                // 解决我的页面数据残留
+                this.reload();
+                this.$router.push("/home");
+              } else {
+                this.$message.error('注销失败')
+              }
+            })
+            .catch(err => {
+              console.log(err)
+            })
+          }
+        })
+        .catch((err) => {
+          Toast({
+              message: "操作失败",
+              position: "top",
+              duration: 5000,
+            });
+            console.log(err)
+        });
+    },
+    // 退出应用
     closeApp() {
       this.$messagebox
         .confirm("确定退出应用？", "提示")

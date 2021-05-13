@@ -47,6 +47,8 @@ export const SignUp =(params) => post(`/users/add`,params);
 export const loginIn =(params) => post(`/users/login`,params);
 //根据用户id查询该用户的详细信息
 export const getUserOfId =(id) => get(`/users/selectByPrimaryKey?id=${id}`);
+// 删除用户
+export const delUsers = id => get(`users/delete?id=${id}`);
 //更新用户信息
 export const updateUserMsg =(params) => post(`/users/update`,params);
 

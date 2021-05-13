@@ -51,7 +51,15 @@
         label="地区"
         placeholder="选填：省份"
         v-model="registerForm.location"
-      ></mt-field>
+        @focus="shengfenVisible = true"
+      >
+        <mt-button @click.native="shengfenVisible = true">点击选择</mt-button>
+        <mt-popup
+          v-model="shengfenVisible"
+          position="bottom">
+          <mt-picker :slots="slots" v-show="shengfenVisible" @change="onValuesChange"></mt-picker>
+        </mt-popup>
+      </mt-field>
       <!-- </router-link> -->
       <mt-field
         label="签名"
@@ -78,6 +86,13 @@ export default {
   mixins: [mixin],
   data() {
     return {
+      slots: [
+        {
+          flex: 1,
+          values: ['海南', '广东','广西','福建','湖南','湖北','安徽','北京','天津','河南','河北','辽宁','江西','浙江','山东','黑龙江','西藏','四川','重庆','上海','江苏','贵州','云南','台湾','山西','陕西','青海','甘肃','吉林','陕西','内蒙古','新疆','宁夏','澳门','香港','南海诸岛'],
+          className: 'shengfen',
+          textAlign: 'right'
+        }],
       registerForm: {
         username: "", //用户名
         password: "", //密码
@@ -88,6 +103,7 @@ export default {
         introduction: "", //签名
         location: "", //地区
       },
+      shengfenVisible: false, // 省份弹出框
       sexValue: false,
       fakeSex: "男",
     };
@@ -148,6 +164,10 @@ export default {
         // console.log(this.registerForm.sex);
       }
     },
+    // 改变选项
+    onValuesChange(picker, values) {
+      this.registerForm.location = values
+    }
   },
 };
 </script>

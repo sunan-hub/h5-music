@@ -21,6 +21,18 @@
 .mint-switch{
   position: absolute;
 }
+
+.picker {
+  width: 100vw;
+}
+
+.mint-button--normal {
+  position: absolute;
+  height: 2em;
+  left: -6em;
+  top: -1.4em;
+}
+
 .trueSexInput {
   visibility: hidden;
 }
