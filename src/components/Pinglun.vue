@@ -103,9 +103,9 @@ export default {
     getPinglun() {
       getAllPinglun(this.type, this.playId)
         .then((res) => {
-          this.pinglunList = res;
+          // this.pinglunList = res;
           for (let item of res) {
-            this.getUsers(item.userId);
+            this.getUsers(item, item.userId)
           }
         })
         .catch((err) => {
@@ -113,11 +113,15 @@ export default {
         });
     },
     //获取用户的头像和昵称
-    getUsers(id) {
+    getUsers(item, id) {
       getUserOfId(id)
         .then((res) => {
           this.userPic.push(res.avator);
-          this.userName.push(res.username);
+          if(res.username) {
+            // 给评论列表赋值,如果用户名不存在代表用户被删
+            this.pinglunList.push(item)
+            this.userName.push(res.username);
+          }
         })
         .catch((err) => {
           Toast("出错了");

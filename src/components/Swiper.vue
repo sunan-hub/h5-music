@@ -19,15 +19,10 @@ export default {
     name: 'swiper',
     props: ['swiperList'],
     data() {
-        return {
-
-        }
-    },
-    created() {
-
+        return {}
     },
     mounted() {
-      console.log(this.swiperList)
+      // console.log(this.swiperList)
     },
     methods: {
 
